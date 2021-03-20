@@ -1,0 +1,11 @@
+.editorconfig
+.eslintignore
+.eslintrc.js
+.gitignore
+.npmignore
+jest.config.js
+jest.setup.ts
+rollup.config.js
+tsconfig.json
+node_modules/
+src/

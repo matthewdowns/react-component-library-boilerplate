@@ -1,4 +1,3 @@
-import classNames from 'classnames';
 import React from 'react';
 import ButtonProps from './Button.props';
 import ButtonStyle from './Button.less';
@@ -9,12 +8,10 @@ function Button(props: ButtonProps): JSX.Element {
     return (
         <button
             id={props.id}
-            className={classNames(ButtonStyle.button, {
-                [ButtonStyle.buttonSmall]: props.size === 'small',
-                [ButtonStyle.buttonLarge]: props.size === 'large'
-            })}
+            className={ButtonStyle.button}
             disabled={props.disabled}
             name={props.name}
+            data-size={props.size}
             data-testid={props['data-testid']}
         >
             {props.children}
