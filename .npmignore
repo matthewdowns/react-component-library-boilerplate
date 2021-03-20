@@ -7,5 +7,7 @@ jest.config.js
 jest.setup.ts
 rollup.config.js
 tsconfig.json
+
+.github/
 node_modules/
 src/
