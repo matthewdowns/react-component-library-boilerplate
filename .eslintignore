@@ -1,6 +1,7 @@
 dist/
 node_modules/
 public/
+src/stories/
 
 jest.config.js
 webpack.config.js
