@@ -11,8 +11,12 @@ function Button(props: ButtonProps): JSX.Element {
             className={ButtonStyle.button}
             disabled={props.disabled}
             name={props.name}
+            data-block={props.block}
             data-shape={props.shape || 'square'}
             data-size={props.size || 'medium'}
+            data-type={props.type || 'flat'}
+            data-variant={props.variant || 'primary'}
+
             data-testid={props['data-testid']}
         >
             {props.children}

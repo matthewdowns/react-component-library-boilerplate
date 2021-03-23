@@ -1,17 +1,22 @@
+@import '../../assets/styles/_theme';
+
 .button {
     display: inline-block;
     border: none;
     outline: none;
     cursor: pointer;
     user-select: none;
+    transition:
+        background-color 0.125s ease-in-out;
 
     &:disabled {
-        opacity: 0.75;
+        background-color: @light !important;
+        color: darken(@light, 25%) !important;
         pointer-events: none;
     }
 
     &:focus {
-        box-shadow: 0 0 3px 1px #fafafa;
+        box-shadow: 0 0 5px 1px @light;
     }
 
     &[data-block="true"] {
@@ -52,5 +57,34 @@
         &[data-shape="round"] {
             border-radius: 0.375rem;
         }
+    }
+
+    .createVariant(@name, @color, @inverse) {
+        &[data-variant="@{name}"] {
+            background-color: @color;
+            color: @inverse;
+
+            @hover-color: darken(@color, 5%);
+            @hover-color-inverse: contrast(@hover-color);
+
+            &:hover {
+                background-color: @hover-color;
+                color: @hover-color-inverse;
+            }
+
+            @active-color: darken(@color, 10%);
+            @active-color-inverse: contrast(@active-color);
+
+            &:active {
+                background-color: @active-color;
+                color: @active-color-inverse;
+            }
+        }
+    }
+    .createVariant("primary", @primary, @primary-inverse);
+    .createVariant("secondary", @secondary, @secondary-inverse);
+
+    +.button {
+        margin-left: 0.25rem;
     }
 }
