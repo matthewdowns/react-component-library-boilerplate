@@ -20,7 +20,8 @@
         "typescript",
         "eslint",
         "jest",
-        "rollup"
+        "rollup",
+        "storybook"
     ],
     "author": "Matthew Downs <matthew.downsc@gmail.com>",
     "license": "MIT",
