@@ -5,7 +5,7 @@ on:
     branches: [ main ]
 
 jobs:
-  deploy:
+  publish:
 
     runs-on: ubuntu-latest
 
@@ -16,6 +16,8 @@ jobs:
     - name: Install
       run: npm ci
     - name: Publish package
-      run: npm publish
+      run: |
+        npm config set //npm.pkg.github.com/:_authToken=$GITHUB_TOKEN
+        npm publish
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
