@@ -25,7 +25,7 @@ jobs:
       run: npm ci
     - name: Build
       run: npm run build
+    - name: Setup .npmrc
+      run: echo "//npm.pkg.github.com/:_authToken=${{ secrets.GITHUB_TOKEN }}" > .npmrc
     - name: Publish package
-      run: |
-        npm config set //npm.pkg.github.com/:_authToken=${{ secrets.GITHUB_TOKEN }}
-        npm publish --ignore-scripts
+      run: npm publish --ignore-scripts
