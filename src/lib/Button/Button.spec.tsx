@@ -6,7 +6,7 @@ import ButtonProps from './Button.props';
 const children = 'Button';
 const testid = 'button';
 
-describe(Button.name, () => {
+describe('Button', () => {
     it('renders', () => Promise.resolve(renderButton()));
     it('renders props:children', () => {
         const body = renderButton();

@@ -1,3 +1,25 @@
-.card {
+@import '../../assets/styles/_theme';
 
+.card {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    border-radius: 0.25rem;
+    box-shadow: 0 0 5px 1px @light;
+
+    > .cardHead {
+        flex-shrink: 1;
+        padding: 1rem;
+        border-bottom: 1px solid @light;
+    }
+
+    > .cardBody {
+        flex-grow: 1;
+        padding: 1rem;
+    }
+
+    > .cardFoot {
+        flex-shrink: 1;
+        padding: 1rem;
+    }
 }

@@ -7,9 +7,18 @@ function Card(props: CardProps): JSX.Element {
 
     return (
         <div
-            className={CardStyle.card}
+            id={props.id}
+            className={`${CardStyle.card}${props.className ? ` ${props.className}` : ''}`}
+            data-testid={props['data-testid']}
         >
-            {props.children}
+            {props.title && (
+                <div className={CardStyle.cardHead}>
+                    {props.title}
+                </div>
+            )}
+            <div className={CardStyle.cardBody}>
+                {props.children}
+            </div>
         </div>
     );
 }

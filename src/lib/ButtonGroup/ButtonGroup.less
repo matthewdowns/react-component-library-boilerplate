@@ -1,0 +1,34 @@
+.buttonGroup {
+    display: inline-flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    overflow: hidden;
+
+    &[data-block="true"] {
+        display: flex;
+        width: 100%;
+    }
+
+    &[data-shape="round"] {
+        border-radius: 0.25rem;
+    }
+
+    &[data-shape="circle"] {
+        border-radius: 9999vw;
+    }
+
+    .buttonGroupItem {
+        display: inline-flex;
+        flex-grow: 1;
+
+        > button {
+            flex-grow: 1;
+            border-radius: 0 !important;
+
+            + button {
+                margin-left: 0 !important;
+            }
+        }
+    }
+}
