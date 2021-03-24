@@ -1,6 +1,5 @@
 const { exec } = require('child_process');
 const { exit } = require('process');
-const { version } = require('../package.json');
 
 isGitBranch('main')
     .then(() => isGitDirectoryClean()

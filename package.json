@@ -1,6 +1,6 @@
 {
     "name": "@matthewdowns/react-component-library-boilerplate",
-    "version": "1.0.0",
+    "version": "0.0.0",
     "description": "Optimized template repository for React component libraries.",
     "main": "dist/index.js",
     "scripts": {
