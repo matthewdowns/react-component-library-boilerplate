@@ -10,7 +10,8 @@
         "test": "jest",
         "test:watch": "jest --watch",
         "storybook:start": "start-storybook -p 6006",
-        "storybook:build": "build-storybook -o ./docs"
+        "storybook:build": "build-storybook -o ./docs",
+        "storybook:deploy": "npm run storybook:build && storybook-to-ghpages --existing-output-dir=./docs"
     },
     "repository": {
         "type": "git",
@@ -42,6 +43,7 @@
         "@storybook/addon-essentials": "^6.1.21",
         "@storybook/addon-links": "^6.1.21",
         "@storybook/react": "^6.1.21",
+        "@storybook/storybook-deployer": "^2.8.7",
         "@testing-library/jest-dom": "^5.11.9",
         "@testing-library/react": "^11.2.5",
         "@types/jest": "^26.0.21",
