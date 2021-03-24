@@ -4,12 +4,13 @@
     "description": "Optimized template repository for React component libraries.",
     "main": "dist/index.js",
     "scripts": {
-        "start": "npm run storybook:start",
+        "start": "run-p storybook:start test:watch",
         "build": "rimraf dist && rollup -c",
         "lint": "eslint .",
         "test": "jest",
+        "test:watch": "jest --watch",
         "storybook:start": "start-storybook -p 6006",
-        "storybook:build": "build-storybook"
+        "storybook:build": "build-storybook -o ./docs"
     },
     "repository": {
         "type": "git",
@@ -37,6 +38,7 @@
         "@rollup/plugin-node-resolve": "^11.2.0",
         "@rollup/plugin-typescript": "^8.2.0",
         "@storybook/addon-actions": "^6.1.21",
+        "@storybook/addon-controls": "^6.1.21",
         "@storybook/addon-essentials": "^6.1.21",
         "@storybook/addon-links": "^6.1.21",
         "@storybook/react": "^6.1.21",
@@ -56,6 +58,7 @@
         "jest-transform-stub": "^2.0.0",
         "less": "^4.1.1",
         "less-loader": "^7.3.0",
+        "npm-run-all": "^4.1.5",
         "postcss": "^8.2.8",
         "rimraf": "^3.0.2",
         "rollup": "^2.42.0",

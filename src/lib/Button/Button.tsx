@@ -8,13 +8,13 @@ function Button(props: ButtonProps): JSX.Element {
     return (
         <button
             id={props.id}
-            className={ButtonStyle.button}
+            className={`${ButtonStyle.button}${props.className ? ` ${props.className}` : ''}`}
             disabled={props.disabled}
             name={props.name}
             data-block={props.block}
+            data-hollow={props.hollow}
             data-shape={props.shape || 'square'}
             data-size={props.size || 'medium'}
-            data-type={props.type || 'flat'}
             data-variant={props.variant || 'primary'}
 
             data-testid={props['data-testid']}

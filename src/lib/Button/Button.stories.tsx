@@ -1,75 +1,71 @@
-import React, { Fragment } from 'react';
+/* eslint-disable @typescript-eslint/ban-ts-comment */
+import { Meta } from '@storybook/react';
+import React from 'react';
 import Button from './Button';
+import ButtonProps from './Button.props';
 
 export default {
-    title: Button.name,
+    title: 'Button',
     component: Button,
+    argTypes: {
+        children: {
+            control: {
+                type: 'text'
+            }
+        },
+        block: {
+            control: {
+                type: 'boolean'
+            },
+            defaultValue: false
+        },
+        hollow: {
+            control: {
+                type: 'boolean'
+            },
+            defaultValue: false
+        },
+        shape: {
+            control: {
+                type: 'inline-radio',
+                options: ['square', 'round', 'circle']
+            },
+            defaultValue: 'square'
+        },
+        size: {
+            control: {
+                type: 'inline-radio',
+                options: ['small', 'medium', 'large']
+            },
+            defaultValue: 'medium'
+        },
+        variant: {
+            control: {
+                type: 'inline-radio',
+                options: ['primary', 'secondary']
+            },
+            defaultValue: 'primary'
+        },
+        'data-testid': {
+            table: {
+                disable: true
+            }
+        }
+    },
     parameters: {
         actions: {
             handles: ['click']
         }
     }
+} as Meta<ButtonProps>;
+
+const Template = ({ children, ...rest }: ButtonProps) => (
+    <Button {...rest}>
+        {children}
+    </Button>
+);
+
+export const Default = Template.bind({});
+Default.args = {
+    children: 'Button'
 }
-
-export const Default = (): JSX.Element => (
-    <Button>
-        Button
-    </Button>
-);
-
-export const Block = (): JSX.Element => (
-    <Button block={true}>
-        Block
-    </Button>
-);
-
-export const Border = (): JSX.Element => (
-    <Button>
-        Border
-    </Button>
-)
-
-export const Disabled = (): JSX.Element => (
-    <Button disabled={true}>
-        Disabled
-    </Button>
-);
-
-export const Shape = (): JSX.Element => (
-    <Fragment>
-        <Button shape="square">
-            Square
-        </Button>
-        <Button shape="round">
-            Round
-        </Button>
-        <Button shape="circle">
-            Circle
-        </Button>
-    </Fragment>
-);
-
-export const Size = (): JSX.Element => (
-    <Fragment>
-        <Button size="small">
-            Small
-        </Button>
-        <Button size="medium">
-            Medium
-        </Button>
-        <Button size="large">
-            Large
-        </Button>
-    </Fragment>
-);
-
-export const Variant = (): JSX.Element => (
-    <Fragment>
-        <Button variant="primary">
-            Primary
-        </Button>
-        <Button variant="secondary">
-            Secondary
-        </Button>
-    </Fragment>
-)

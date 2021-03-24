@@ -1,5 +1,6 @@
 module.exports = {
     addons: [
+        '@storybook/addon-controls',
         '@storybook/addon-links',
         '@storybook/addon-essentials'
     ],

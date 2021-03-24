@@ -1,12 +1,12 @@
 import { ReactNode } from 'react';
 
-interface ButtonProps extends Partial<Pick<HTMLButtonElement, 'id' | 'disabled' | 'name'>> {
-    block?: boolean;
+interface ButtonProps extends Partial<Pick<HTMLButtonElement, 'id' | 'className' | 'name' | 'disabled'>> {
     children?: ReactNode;
-    shape?: Shape;
-    size?: Size;
-    type?: 'flat' | 'raised' | 'hollow';
-    variant?: Variant;
+    block?: boolean;
+    hollow?: boolean;
+    shape?: 'square' | 'round' | 'circle';
+    size?: 'small' | 'medium' | 'large';
+    variant?: 'primary' | 'secondary';
     'data-testid'?: string;
 }
 

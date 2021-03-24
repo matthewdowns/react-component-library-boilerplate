@@ -1,7 +1,0 @@
-<svg version="1.1" height="200px" width="200px" xmlns="https://www.w3.org/2000/svg">
-    <clipPath id="cut-off-bottom">
-        <rect x="0" y="0" width="200" height="100" />
-    </clipPath>
-
-    <circle cx="100" cy="100" r="100" fill="none" stroke="black" stroke-width="2" clip-path="url(#cut-off-bottom)" />
-</svg>
