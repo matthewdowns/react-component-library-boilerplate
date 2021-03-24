@@ -9,17 +9,25 @@ jobs:
 
     runs-on: ubuntu-latest
 
+    strategy:
+      matrix:
+        node-version: [15.x]
+
     steps:
     - uses: actions/checkout@v2
       with:
-        ref: $GITHUB_REF
-    - name: Use Node.js
+        ref: ${{ github.ref }}
+    - name: Use Node.js ${{ matrix.node-version }}
       uses: actions/setup-node@v1
+      with:
+        node-version: ${{ matrix.node-version }}
     - name: Install dependencies
       run: npm ci
-    - name: Publish package
+    - name: Build
+      run: npm run build
+    - name: Setup .npmrc
       run: |
-        npm config set //npm.pkg.github.com/:_authToken=$GITHUB_TOKEN
-        npm publish
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        echo "//npm.pkg.github.com/:_authToken=${{ secrets.GITHUB_TOKEN }}" >> .npmrc
+        echo "@matthewdowns:registry=https://npm.pkg.github.com" >> .npmrc
+    - name: Publish package
+      run: npm publish --ignore-scripts
