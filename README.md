@@ -8,6 +8,7 @@ Optimized template repository for React component libraries.
 
 
 
+
 ## About the template
 
 ![react-component-library-boilerplate screenshot](https://repository-images.githubusercontent.com/349459029/62dc8180-8c2c-11eb-8a33-d97e8495539f)
@@ -36,6 +37,7 @@ Optimized template repository for React component libraries.
 
 
 
+
 ## Contributing
 
 Contributions are what make the open source community such an amazing place to be learn, inspire, and create. Any contributions you make are **greatly appreciated**.
@@ -48,9 +50,13 @@ Contributions are what make the open source community such an amazing place to b
 
 
 
+
 ## License
 
 Distributed under the MIT License. See `LICENSE` for more information.
+
+
+
 
 ## Contact
 
