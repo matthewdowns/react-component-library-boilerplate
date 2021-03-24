@@ -12,6 +12,11 @@ export default {
                 disable: true
             }
         },
+        title: {
+            control: {
+                type: 'text'
+            }
+        },
         'data-testid': {
             table: {
                 disable: true

@@ -13,7 +13,9 @@ function Card(props: CardProps): JSX.Element {
         >
             {props.title && (
                 <div className={CardStyle.cardHead}>
-                    {props.title}
+                    {props.title instanceof String
+                        ? <strong>{props.title}</strong>
+                        : props.title}
                 </div>
             )}
             <div className={CardStyle.cardBody}>
