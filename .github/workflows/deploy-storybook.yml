@@ -5,7 +5,7 @@ on:
     branches: [ main ]
 
 jobs:
-  build:
+  deploy-storybook:
 
     runs-on: ubuntu-latest
 
@@ -15,11 +15,10 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
-    - name: Use Node.js ${{ matrix.node-version }}
+    - name: Use Node.js
       uses: actions/setup-node@v1
-      with:
-        node-version: ${{ matrix.node-version }}
     - run: npm ci
+    - name: Deploy Storybook
     - run: npm run storybook:deploy -- --ci
       env:
         GH_TOKEN: matthewdowns:${{ secrets.GITHUB_TOKEN }}
