@@ -8,7 +8,6 @@
         "build": "rimraf dist && rollup -c",
         "lint": "eslint .",
         "test": "jest",
-        "test:watch": "jest --watch",
         "storybook:start": "start-storybook -p 6006",
         "storybook:build": "build-storybook -o ./docs",
         "storybook:deploy": "storybook-to-ghpages -o ./docs"
