@@ -65,7 +65,7 @@ export default [
             }),
             terser(),
             postcss({
-                extract: false,
+                extract: true,
                 minimize: true,
                 modules: true,
                 sourceMap: false,
