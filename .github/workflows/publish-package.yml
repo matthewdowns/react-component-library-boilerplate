@@ -16,9 +16,7 @@ jobs:
     steps:
     - uses: actions/checkout@v2
       with:
-        ref: $GITHUB_REF
-      env:
-        GITHUB_REF: ${{ secrets.GITHUB_REF }}
+        ref: ${{ github.ref }}
     - name: Use Node.js ${{ matrix.node-version }}
       uses: actions/setup-node@v1
       with:
