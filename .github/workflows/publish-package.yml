@@ -26,6 +26,8 @@ jobs:
     - name: Build
       run: npm run build
     - name: Setup .npmrc
-      run: echo "//npm.pkg.github.com/:_authToken=${{ secrets.GITHUB_TOKEN }}" > .npmrc
+      run: |
+        echo "//npm.pkg.github.com/:_authToken=${{ secrets.GITHUB_TOKEN }}" >> .npmrc
+        echo "@matthewdowns:registry=https://npm.pkg.github.com" >> .npmrc
     - name: Publish package
       run: npm publish --ignore-scripts
