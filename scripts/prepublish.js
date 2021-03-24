@@ -2,7 +2,7 @@ const { exec } = require('child_process');
 const { exit } = require('process');
 const { version } = require('../package.json');
 
-isGitBranch('matthewdowns/setup-publishing')
+isGitBranch('main')
     .then(() => isGitDirectoryClean()
         .catch(e => error(e)))
     .catch(e => error(e));
