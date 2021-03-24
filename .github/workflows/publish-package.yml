@@ -1,8 +1,8 @@
 name: Publish Package
 
 on:
-  push:
-    branches: [ main ]
+    release:
+        types: [ published ]
 
 jobs:
   publish:
@@ -11,9 +11,11 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
+      with:
+        ref: $GITHUB_REF
     - name: Use Node.js
       uses: actions/setup-node@v1
-    - name: Install
+    - name: Install dependencies
       run: npm ci
     - name: Publish package
       run: |
