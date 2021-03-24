@@ -1,13 +1,14 @@
 name: Deploy Storybook
 
 on:
-  push:
-    branches: [ stable ]
   pull_request:
-    branches: [ stable ]
+    branches: [ main ]
+    types: [ closed ]
 
 jobs:
   build:
+
+    if: github.event.pull_request.merged == 'true'
 
     runs-on: ubuntu-latest
 
