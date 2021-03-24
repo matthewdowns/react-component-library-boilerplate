@@ -3,7 +3,7 @@ Optimized template repository for React component libraries.
 
 ![GitHub package.json version](https://img.shields.io/github/package-json/v/matthewdowns/react-component-library-boilerplate)
 ![David](https://img.shields.io/david/matthewdowns/react-component-library-boilerplate)
-[![Node.js CI](https://github.com/matthewdowns/react-component-library-boilerplate/actions/workflows/node.js.yml/badge.svg?branch=main)](https://github.com/matthewdowns/react-component-library-boilerplate/actions/workflows/node.js.yml)
+[![Node.js CI](https://github.com/matthewdowns/react-component-library-boilerplate/actions/workflows/node.js.yml/badge.svg)](https://github.com/matthewdowns/react-component-library-boilerplate/actions/workflows/node.js.yml)
 [![CodeQL](https://github.com/matthewdowns/react-component-library-boilerplate/actions/workflows/codeql-analysis.yml/badge.svg)](https://github.com/matthewdowns/react-component-library-boilerplate/actions/workflows/codeql-analysis.yml)
 
 
