@@ -10,7 +10,8 @@
         "test": "jest",
         "storybook:start": "start-storybook -p 6006",
         "storybook:build": "build-storybook -o ./docs",
-        "storybook:deploy": "storybook-to-ghpages -o ./docs"
+        "storybook:deploy": "storybook-to-ghpages -o ./docs",
+        "prepublishOnly": "npm run lint && npm run test && npm run build"
     },
     "repository": {
         "type": "git",

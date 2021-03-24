@@ -4,6 +4,9 @@ dist
 # Docs
 docs
 
+# NPM Publishing
+.npmrc
+
 # Logs
 logs
 *.log

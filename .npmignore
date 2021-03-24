@@ -3,11 +3,13 @@
 .eslintrc.js
 .gitignore
 .npmignore
+.npmrc
 jest.config.js
 jest.setup.ts
 rollup.config.js
 tsconfig.json
 
 .github/
+.storybook/
 node_modules/
 src/
