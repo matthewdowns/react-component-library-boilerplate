@@ -9,23 +9,23 @@ Optimized template repository for React component libraries.
 
 
 
-## About the template
+## Introduction
+
+This template will give you a jumpstart on designing, testing, and publishing your very own React component library!
 
 ![react-component-library-boilerplate screenshot](https://repository-images.githubusercontent.com/349459029/62dc8180-8c2c-11eb-8a33-d97e8495539f)
+
+Click on the [Use this template](https://github.com/matthewdowns/react-component-library-boilerplate/generate) button to generate your own repository from this one.
+
+## Usage
 
 ### Prerequisites
 
 * [Node.js](https://nodejs.org)
 
-### Installation
+### Commands
 
-1. [Use this template](https://github.com/matthewdowns/react-component-library-boilerplate/generate) to generate your own repository
-2. Clone the new repo and install the package dependencies
-   ```sh
-   npm install
-   ```
-
-### Usage
+Run `npm install` first to install package dependencies.
 
 * `npm start` - Shortcut for `npm run storybook:start`
 * `npm run build` - Build the component library to the _dist_ folder
@@ -53,7 +53,7 @@ Contributions are what make the open source community such an amazing place to b
 
 ## License
 
-Distributed under the MIT License. See `LICENSE` for more information.
+Distributed under the MIT License. See [LICENSE](https://github.com/matthewdowns/react-component-library-boilerplate/tree/main/LICENSE) for more information.
 
 
 
