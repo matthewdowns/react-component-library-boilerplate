@@ -1,24 +1,28 @@
 import React from 'react';
-import ButtonGroupProps from './ButtonGroup.props';
-import ButtonGroupStyle from './ButtonGroup.less';
+import ButtonGroupProps from './button-group.props';
+import './button-group.less';
 
+/**
+ * A collection of buttons
+ * @param props {@link ButtonGroupProps}
+ * @returns
+ */
 function ButtonGroup(props: ButtonGroupProps): JSX.Element {
-
-    function renderButtonGroupItem(child: typeof props.children, key?: string): JSX.Element {
+    function renderButtonGroupItem(child: ButtonGroupProps['children'], key?: string): JSX.Element {
         return (
             <div
                 key={key}
-                className={ButtonGroupStyle.buttonGroupItem}
+                className="button-group-item"
             >
                 {child}
             </div>
-        )
+        );
     }
 
     return (
         <div
             id={props.id}
-            className={`${ButtonGroupStyle.buttonGroup}${props.className ? ` ${props.className}` : ''}`}
+            className={`button-group${props.className ? ` ${props.className}` : ''}`}
             data-block={props.block}
             data-shape={props.shape}
             data-testid={props['data-testid']}

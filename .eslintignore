@@ -1,9 +1,8 @@
 dist/
 docs/
 node_modules/
-public/
 scripts/
 src/stories/
 
 jest.config.js
-webpack.config.js
+styleguide.config.js

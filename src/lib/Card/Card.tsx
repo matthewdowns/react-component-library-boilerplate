@@ -1,6 +1,6 @@
 import React from 'react';
-import CardProps from './Card.props';
-import CardStyle from './Card.less';
+import CardProps from './card.props';
+import './card.less';
 
 function Card(props: CardProps): JSX.Element {
 
@@ -8,19 +8,25 @@ function Card(props: CardProps): JSX.Element {
     return (
         <div
             id={props.id}
-            className={`${CardStyle.card}${props.className ? ` ${props.className}` : ''}`}
+            className={`card${props.className ? ` ${props.className}` : ''}`}
+            title={props.title}
             data-testid={props['data-testid']}
         >
-            {props.title && (
-                <div className={CardStyle.cardHead}>
-                    {props.title instanceof String
-                        ? <strong>{props.title}</strong>
-                        : props.title}
+            {props.header && (
+                <div className="card-header">
+                    {props.header instanceof String
+                        ? <strong>{props.header}</strong>
+                        : props.header}
                 </div>
             )}
-            <div className={CardStyle.cardBody}>
+            <div className="card-body">
                 {props.children}
             </div>
+            {props.footer && (
+                <div className="card-footer">
+                    {props.footer}
+                </div>
+            )}
         </div>
     );
 }

@@ -7,11 +7,10 @@ import { dependencies } from './package.json';
 
 const input = resolve(__dirname, './src/index.ts');
 const external = Object.keys(dependencies);
-
 const umdName = 'rclb';
 
 export default [
-    { // esm library and umd development build
+    {
         input,
         output: [
             {
@@ -25,7 +24,8 @@ export default [
                 name: umdName,
                 sourcemap: true,
                 globals: {
-                    'react': 'React'
+                    'react': 'React',
+                    'react-dom': 'ReactDOM'
                 }
             }
         ],
@@ -44,7 +44,7 @@ export default [
         ],
         external
     },
-    { // umd production build
+    {
         input,
         output: {
             file: resolve(__dirname, `./dist/umd/${umdName}.min.js`),

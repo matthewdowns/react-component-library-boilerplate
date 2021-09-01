@@ -1,7 +1,7 @@
 {
     "compilerOptions": {
-      "target": "ESNEXT",
-      "module": "ESNEXT",
+      "target": "ESNext",
+      "module": "commonjs",
       "jsx": "react",
       "declaration": true,
       "declarationMap": true,
@@ -12,6 +12,11 @@
       "strict": true,
       "moduleResolution": "node",
       "baseUrl": "./",
+      "paths": {
+        "~assets/*": [
+          "./src/assets/*"
+        ]
+      },
       "esModuleInterop": true,
       "resolveJsonModule": true,
       "skipLibCheck": true,

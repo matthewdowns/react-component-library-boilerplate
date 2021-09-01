@@ -1,14 +1,17 @@
 import React from 'react';
-import ButtonProps from './Button.props';
-import ButtonStyle from './Button.less';
+import ButtonProps from './button.props';
+import './button.less';
 
+/**
+ * A generic button
+ * @param props {@link ButtonProps}
+ * @returns Element
+ */
 function Button(props: ButtonProps): JSX.Element {
-
-
     return (
         <button
             id={props.id}
-            className={`${ButtonStyle.button}${props.className ? ` ${props.className}` : ''}`}
+            className={`button${props.className ? ` ${props.className}` : ''}`}
             disabled={props.disabled}
             name={props.name}
             data-block={props.block}
