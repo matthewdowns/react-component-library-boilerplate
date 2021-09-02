@@ -22,12 +22,12 @@
     },
     "main": "dist/index.js",
     "scripts": {
-        "start": "npm run styleguide:start",
+        "start": "npm run styleguide:serve",
         "build": "rollup -c",
         "lint": "eslint .",
         "test": "jest",
-        "styleguide:start": "styleguidist server",
-        "styleguide:build": "styleguidist build"
+        "styleguide:build": "styleguidist build",
+        "styleguide:serve": "styleguidist server"
     },
     "dependencies": {
         "react": "^17.0.2",
@@ -64,7 +64,7 @@
         "ts-jest": "^27.0.5",
         "ts-loader": "^9.2.5",
         "tsconfig-paths-webpack-plugin": "^3.5.1",
-        "typescript": "^4.4.2",
+        "typescript": "^4.3.5",
         "webpack": "^5.51.1"
     },
     "engines": {
