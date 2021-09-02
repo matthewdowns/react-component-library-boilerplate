@@ -1,8 +1,9 @@
 import { ReactNode } from 'react';
 
-interface CardProps extends Partial<Pick<HTMLDivElement, 'id' | 'className'>> {
+interface CardProps extends Partial<Omit<HTMLElement, 'children'>> {
     children?: ReactNode;
-    title?: ReactNode;
+    footer?: ReactNode;
+    header?: ReactNode;
     'data-testid'?: string;
 }
 

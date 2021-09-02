@@ -1,10 +1,11 @@
 import { render } from '@testing-library/react';
 import React from 'react';
-import Card from './Card';
-import CardProps from './Card.props';
+import Card from './card';
+import CardProps from './card.props';
 
-const children = 'Card';
-const title = 'Title';
+const children = <p>Children</p>;
+const footer = <p>Footer</p>;
+const header = <p>Header</p>;
 const testid = 'card';
 
 describe('Card', () => {
@@ -12,14 +13,17 @@ describe('Card', () => {
     it('renders props:children', () => {
         const body = renderCard({ children });
         const card = body.getByTestId(testid);
-        const cardBody = card.children[0]; // no title, so body is the first child
-        expect(cardBody).toHaveTextContent(children);
+        expect(card.children.length).toBe(1);
     });
-    it('renders props:title', () => {
-        const body = renderCard({ title });
+    it('renders props:footer', () => {
+        const body = renderCard({ footer });
         const card = body.getByTestId(testid);
-        const cardHead = card.children[0];
-        expect(cardHead).toHaveTextContent(title);
+        expect(card.children.length).toBe(2);
+    })
+    it('renders props:header', () => {
+        const body = renderCard({ header });
+        const card = body.getByTestId(testid);
+        expect(card.children.length).toBe(2);
     });
 });
 

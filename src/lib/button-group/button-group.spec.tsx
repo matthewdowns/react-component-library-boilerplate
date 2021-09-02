@@ -1,8 +1,8 @@
 import { render } from '@testing-library/react';
 import React from 'react';
-import Button from '../Button';
-import ButtonGroup from './ButtonGroup';
-import ButtonGroupProps from './ButtonGroup.props';
+import Button from '../button';
+import ButtonGroup from './button-group';
+import ButtonGroupProps from './button-group.props';
 
 const children = [
     <Button key="button-1">

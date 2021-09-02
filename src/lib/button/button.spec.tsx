@@ -1,7 +1,7 @@
 import { render } from '@testing-library/react';
 import React from 'react';
-import Button from './Button';
-import ButtonProps from './Button.props';
+import Button from './button';
+import ButtonProps from './button.props';
 
 const children = 'Button';
 const testid = 'button';
