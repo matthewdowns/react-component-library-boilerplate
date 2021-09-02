@@ -3,12 +3,15 @@
     "version": "1.0.3",
     "description": "Optimized template repository for React component libraries.",
     "keywords": [
-        "react",
-        "typescript",
+        "boilerplate",
         "eslint",
         "jest",
+        "react",
+        "reactjs",
         "rollup",
-        "storybook"
+        "styleguidist",
+        "testing-library",
+        "typescript"
     ],
     "license": "MIT",
     "author": "Matthew Downs <matthew.downsc@gmail.com>",
