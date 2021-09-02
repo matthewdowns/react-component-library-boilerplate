@@ -1,5 +1,5 @@
 import { ReactElement } from 'react';
-import ButtonProps from '../button/button.props';
+import { ButtonProps } from '../button';
 
 interface ButtonGroupProps extends Partial<Omit<HTMLDivElement, 'children'>> {
     children?: ReactElement<ButtonProps> | ReactElement<ButtonProps>[];
