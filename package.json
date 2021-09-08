@@ -26,8 +26,8 @@
     "main": "dist/index.js",
     "scripts": {
         "start": "npm run styleguide:serve",
-        "build": "rollup -c",
         "lint": "eslint .",
+        "build": "rollup -c",
         "test": "jest",
         "styleguide:build": "styleguidist build",
         "styleguide:serve": "styleguidist server"
@@ -37,8 +37,7 @@
         "react-dom": "^17.0.2"
     },
     "devDependencies": {
-        "@babel/preset-react": "^7.14.5",
-        "@babel/preset-typescript": "^7.15.0",
+        "@axe-core/react": "^4.2.2",
         "@rollup/plugin-node-resolve": "^13.0.4",
         "@rollup/plugin-typescript": "^8.2.5",
         "@testing-library/jest-dom": "^5.14.1",
@@ -67,8 +66,7 @@
         "ts-jest": "^27.0.5",
         "ts-loader": "^9.2.5",
         "tsconfig-paths-webpack-plugin": "^3.5.1",
-        "typescript": "^4.3.5",
-        "webpack": "^5.51.1"
+        "typescript": "^4.3.5"
     },
     "engines": {
         "node": ">=12 <=16"

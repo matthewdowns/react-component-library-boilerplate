@@ -1,17 +1,33 @@
-const { resolve } = require('path');
+const { join } = require('path');
 const TsconfigPathsWebpackPlugin = require('tsconfig-paths-webpack-plugin');
 const { DefinePlugin } = require('webpack');
+const pkg = require('./package.json');
 
 module.exports = {
     title: 'React Component Library Boilerplate',
-    components: 'src/lib/**/*.tsx',
+    version: pkg.version,
+    components: join(__dirname, 'src/lib/**/*.tsx'),
+    require: [
+        join(__dirname, 'styleguide/setup.js'),
+        join(__dirname, 'styleguide/styles.css')
+    ],
+    assetsDir: join(__dirname, 'styleguide/assets'),
+    styleguideDir: join(__dirname, 'docs'),
+    template: {
+        favicon: 'favicon.ico',
+        head: {
+            links: [
+                { href: 'site.webmanifest', rel: 'manifest' }
+            ]
+        }
+    },
+    ribbon: {
+        text: 'View on GitHub',
+        url: pkg.homepage
+    },
+    exampleMode: 'expand',
+    usageMode: 'expand',
     webpackConfig: {
-        entry: resolve(__dirname, './src/index.tsx'),
-        output: {
-            filename: '[name].[chunkhash].js',
-            path: resolve(__dirname, './dist'),
-            publicPath: '/'
-        },
         module: {
             rules: [
                 {
@@ -32,6 +48,13 @@ module.exports = {
                                 }
                             }
                         }
+                    ]
+                },
+                {
+                    test: /\.css$/,
+                    use: [
+                        'style-loader',
+                        'css-loader'
                     ]
                 }
             ]

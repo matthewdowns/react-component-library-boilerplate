@@ -52,7 +52,8 @@ export default [
             name: umdName,
             sourcemap: false,
             globals: {
-                'react': 'React'
+                'react': 'React',
+                'react-dom': 'ReactDOM'
             }
         },
         plugins: [
