@@ -13,8 +13,8 @@
       "moduleResolution": "node",
       "baseUrl": "./",
       "paths": {
-        "~assets/*": [
-          "./src/assets/*"
+        "@matthewdowns/react-component-library-boilerplate/*": [
+          "./src/*"
         ]
       },
       "esModuleInterop": true,
@@ -26,11 +26,12 @@
       "./src/**/*"
     ],
     "exclude": [
-      "node_modules",
-      "scripts",
+      "./node_modules",
+      "./scripts",
       "./src/**/*.snapshot.*",
       "./src/**/*.spec.*",
       "./src/**/*.stories.*",
-      "./src/**/*.test.*"
+      "./src/**/*.test.*",
+      "./styleguide"
     ]
 }

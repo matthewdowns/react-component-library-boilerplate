@@ -1,4 +1,4 @@
-@import '../../assets/styles/_theme';
+@import '../../styles/_theme';
 
 .card {
     display: flex;
@@ -7,20 +7,26 @@
     border-radius: 0.25rem;
     box-shadow: 0 0 5px 1px @light;
 
-    > .cardHeader {
+    > .card-header {
         flex-shrink: 1;
         padding: 1rem;
         border-bottom: 1px solid @light;
+        font-size: 1.125rem;
+        font-weight: 400;
     }
 
-    > .cardBody {
+    > .card-body {
         flex-grow: 1;
         padding: 1rem;
+        font-size: 1rem;
+        font-weight: 200;
     }
 
-    > .cardFooter {
+    > .card-footer {
         flex-shrink: 1;
         padding: 1rem;
         border-top: 1px solid @light;
+        font-size: 0.875rem;
+        font-weight: 200;
     }
 }
