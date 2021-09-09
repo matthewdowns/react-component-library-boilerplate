@@ -1,8 +1,14 @@
 name: "CodeQL"
 
 on:
-  schedule:
-    - cron: '27 10 * * 4'
+  push:
+    branches: [main]
+    paths-ignore:
+      - docs
+  pull_request:
+    branches: [main]
+    paths-ignore:
+      - docs
 
 jobs:
   analyze:
