@@ -1,4 +1,5 @@
 # react-component-library-boilerplate
+
 Optimized template repository for React component libraries.
 
 ![GitHub package.json version](https://img.shields.io/github/package-json/v/matthewdowns/react-component-library-boilerplate)
@@ -17,6 +18,9 @@ This template will give you a jumpstart on designing, testing, and publishing yo
 
 Click on the [Use this template](https://github.com/matthewdowns/react-component-library-boilerplate/generate) button to generate your own repository from this one.
 
+
+
+
 ## Usage
 
 ### Prerequisites
@@ -34,19 +38,6 @@ Run `npm install` first to install package dependencies.
 * `npm run storybook:start` - Run the Storybook server for component visualization
 * `npm run storybook:build` - Build a static Storybook site to the _docs_ folder
 * `npm run storybook:deploy` - Deploy a static Storybook site to the **gh_pages** branch of your repository
-
-
-
-
-## Contributing
-
-Contributions are what make the open source community such an amazing place to be learn, inspire, and create. Any contributions you make are **greatly appreciated**.
-
-1. Fork the repository
-2. Create your feature branch (`git checkout -b {username}/my-feature`)
-3. Commit your changes (`git commit -m 'Add some feature'`)
-4. Push to the branch (`git push origin {username}/my-feature`)
-5. [Open a pull request](https://github.com/matthewdowns/react-component-library-boilerplate/pulls)
 
 
 
