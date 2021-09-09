@@ -29,13 +29,12 @@ Click on the [Use this template](https://github.com/matthewdowns/react-component
 
 Run `npm install` first to install package dependencies.
 
-* `npm start` - Shortcut for `npm run storybook:start`
-* `npm run build` - Build the component library to the _dist_ folder
+* `npm start` - Shortcut for `npm run styleguide:serve`
 * `npm run lint` - Run the ESLint linter to check for warnings and errors
+* `npm run build` - Build the component library to the _dist_ folder
 * `npm test` - Run the Jest testing suite to verify that the components will behave correctly
-* `npm run storybook:start` - Run the Storybook server for component visualization
-* `npm run storybook:build` - Build a static Storybook site to the _docs_ folder
-* `npm run storybook:deploy` - Deploy a static Storybook site to the **gh_pages** branch of your repository
+* `npm run storybook:serve` - Run the Styleguidist server for component visualization
+* `npm run storybook:build` - Build a static Styleguidist site to the _docs_ folder
 
 
 
