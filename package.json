@@ -27,7 +27,7 @@
     "scripts": {
         "start": "npm run styleguide:serve",
         "lint": "eslint .",
-        "build": "rollup -c",
+        "build": "rimraf dist && rollup -c && node scripts/postbuild.js",
         "test": "jest",
         "styleguide:build": "styleguidist build",
         "styleguide:serve": "styleguidist server"
