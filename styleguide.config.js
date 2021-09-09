@@ -60,7 +60,7 @@ module.exports = {
             ]
         },
         resolve: {
-            extensions: ['.less', '.js', '.json', '.ts', '.tsx'],
+            extensions: ['.css', '.less', '.js', '.json', '.ts', '.tsx'],
             plugins: [
                 new TsconfigPathsWebpackPlugin()
             ]
@@ -74,8 +74,11 @@ module.exports = {
         devServer: {
             contentBase: '/',
             publicPath: '/',
+            port: 8080,
+            inline: true,
+            hot: true,
             historyApiFallback: true,
-            port: 8080
+            watchContentBase: true
         }
     }
 }

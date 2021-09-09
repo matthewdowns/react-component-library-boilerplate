@@ -88,8 +88,14 @@
                 background-color: transparent;
                 color: @color;
 
+                &:hover {
+                    background-color: @color;
+                    color: @color-inverse;
+                }
+
                 &:active {
-                    color: @active-color;
+                    background-color: @active-color;
+                    color: @active-color-inverse;
                 }
             }
         }
