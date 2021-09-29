@@ -59,7 +59,7 @@
         "postcss": "^8.3.8",
         "react-styleguidist": "^11.1.7",
         "rimraf": "^3.0.2",
-        "rollup": "^2.56.3",
+        "rollup": "^2.57.0",
         "rollup-plugin-postcss": "^4.0.1",
         "rollup-plugin-terser": "^7.0.2",
         "style-loader": "^3.3.0",
