@@ -5,13 +5,18 @@ Components that use colors will import the LESS variables defined in [theme.less
 
 ## Colors
 
-<ul style="list-style-type: none; padding: 0;">
-    <li style="color: #f0f0f0;" title="#f0f0f0">light</li>
-    <li style="color: #353535;" title="#353535">dark</li>
-    <li style="color: #aa55ff;" title="#aa55ff">primary</li>
-    <li style="color: #0088ff;" title="#0088ff">secondary</li>
-    <li style="color: #aaffff;" title="#aaffff">info</li>
-    <li style="color: #0be06b;" title="#0be06b">success</li>
-    <li style="color: #ffff03;" title="#ffff03">warning</li>
-    <li style="color: #db3a35;" title="#db3a35">error</li>
-</ul>
+![#f0f0f0](https://via.placeholder.com/10/f0f0f0/000000?text=+)&emsp;`#f0f0f0`&emsp;light
+
+![#353535](https://via.placeholder.com/10/353535/000000?text=+)&emsp;`#353535`&emsp;dark
+
+![#aa55ff](https://via.placeholder.com/10/aa55ff/000000?text=+)&emsp;`#aa55ff`&emsp;primary
+
+![#0088ff](https://via.placeholder.com/10/0088ff/000000?text=+)&emsp;`#0088ff`&emsp;secondary
+
+![#aaffff](https://via.placeholder.com/10/aaffff/000000?text=+)&emsp;`#aaffff`&emsp;info
+
+![#0be06b](https://via.placeholder.com/10/0be06b/000000?text=+)&emsp;`#0be06b`&emsp;success
+
+![#ffff03](https://via.placeholder.com/10/ffff03/000000?text=+)&emsp;`#ffff03`&emsp;warning
+
+![#db3a35](https://via.placeholder.com/10/db3a35/000000?text=+)&emsp;`#db3a35`&emsp;error
