@@ -25,8 +25,6 @@ module.exports = {
         text: 'View on GitHub',
         url: pkg.homepage
     },
-    exampleMode: 'expand',
-    usageMode: 'expand',
     webpackConfig: {
         module: {
             rules: [
@@ -77,7 +75,6 @@ module.exports = {
             port: 8080,
             inline: true,
             hot: true,
-            historyApiFallback: true,
             watchContentBase: true
         }
     }
