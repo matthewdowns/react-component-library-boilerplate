@@ -4,9 +4,11 @@
     "description": "Optimized template repository for React component libraries.",
     "keywords": [
         "boilerplate",
+        "component-library",
         "eslint",
         "jest",
         "react",
+        "react-component-library",
         "reactjs",
         "rollup",
         "styleguidist",

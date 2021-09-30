@@ -36,7 +36,33 @@ Run `npm install` first to install package dependencies.
 * `npm run storybook:serve` - Run the Styleguidist server for component visualization
 * `npm run storybook:build` - Build a static Styleguidist site to the _docs_ folder
 
+### Theme
 
+Import the theme file in your application the apply the correct styling to all components.
+
+```tsx
+import '~@matthewdowns/react-component-library-boilerplate/styles/theme.less';
+```
+
+### Colors
+
+Components that use colors will import the LESS variables defined in [_colors.less](./_colors.less).
+
+![#f0f0f0](https://via.placeholder.com/10/f0f0f0/000000?text=+)&emsp;`#f0f0f0`&emsp;light
+
+![#353535](https://via.placeholder.com/10/353535/000000?text=+)&emsp;`#353535`&emsp;dark
+
+![#aa55ff](https://via.placeholder.com/10/aa55ff/000000?text=+)&emsp;`#aa55ff`&emsp;primary
+
+![#0088ff](https://via.placeholder.com/10/0088ff/000000?text=+)&emsp;`#0088ff`&emsp;secondary
+
+![#aaffff](https://via.placeholder.com/10/aaffff/000000?text=+)&emsp;`#aaffff`&emsp;info
+
+![#0be06b](https://via.placeholder.com/10/0be06b/000000?text=+)&emsp;`#0be06b`&emsp;success
+
+![#ffff03](https://via.placeholder.com/10/ffff03/000000?text=+)&emsp;`#ffff03`&emsp;warning
+
+![#db3a35](https://via.placeholder.com/10/db3a35/000000?text=+)&emsp;`#db3a35`&emsp;error
 
 
 ## Publishing
@@ -47,7 +73,7 @@ Package publishing is handled automatically via [GitHub Actions](https://github.
 
 First, create a new branch - _release/vx.x.x_ - and run the `npm version {major,minor,patch,etc.} command to update the package.json version automatically.
 
-For example, if the lastest tag version is _v1.0.4_, then I would create a new branch off of _main_ called _v1.0.5_, and then run `npm version patch` to upgrade the packge version from _1.0.4_ to _1.0.5_. 
+For example, if the lastest tag version is _v1.0.4_, then you would create a new branch off of _main_ called _v1.0.5_, and then run `npm version patch` to upgrade the packge version from _1.0.4_ to _1.0.5_. 
 
 > Please note that the _package.json_ version should **never** include the "v" prefix, according to the [semantic versioning specification](https://semver.org/spec/v2.0.0#is-v123-a-semantic-version). However, it does specifies that tags on GitHub or other version control systems can be prefixed with a "v".
 
