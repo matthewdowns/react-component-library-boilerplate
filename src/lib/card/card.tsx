@@ -2,9 +2,12 @@ import React from 'react';
 import CardProps from './card.props';
 import './card.less';
 
+/**
+ * Container to place a header, footer, and content
+ * @param props
+ * @returns
+ */
 function Card(props: CardProps): JSX.Element {
-
-
     return (
         <div
             id={props.id}

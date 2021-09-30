@@ -1,11 +1,45 @@
-```tsx
-import Button from '@matthewdowns/react-component-library-boilerplate/lib/button';
-import Card from '@matthewdowns/react-component-library-boilerplate/lib/card';
+```tsx padded
+<div>
+    <Card>
+        Mauris pretium a ligula vitae vehicula. Morbi at vestibulum ante.
+        Integer diam neque, cursus non metus ac, hendrerit blandit erat.
+        Maecenas lectus nisi, lacinia at euismod id, molestie ut leo.
+    </Card>
+</div>
+```
 
-<Card
-    footer="Footer"
-    header="Header"
->
-    Mauris pretium a ligula vitae vehicula. Morbi at vestibulum ante. Praesent ut sagittis risus, quis porttitor urna. Integer diam neque, cursus non metus ac, hendrerit blandit erat. Maecenas lectus nisi, lacinia at euismod id, molestie ut leo. Nunc eu orci vitae est sagittis tristique. Proin sit amet fermentum elit. Phasellus scelerisque quis purus ut vehicula.
-</Card>
+### Header
+
+```tsx padded
+<div>
+    <Card header="Header">
+        Mauris pretium a ligula vitae vehicula. Morbi at vestibulum ante.
+        Integer diam neque, cursus non metus ac, hendrerit blandit erat.
+        Maecenas lectus nisi, lacinia at euismod id, molestie ut leo.
+    </Card>
+</div>
+```
+
+### Footer
+
+```tsx padded
+<div>
+    <Card footer="Footer">
+        Mauris pretium a ligula vitae vehicula. Morbi at vestibulum ante.
+        Integer diam neque, cursus non metus ac, hendrerit blandit erat.
+        Maecenas lectus nisi, lacinia at euismod id, molestie ut leo.
+    </Card>
+</div>
+```
+
+### Header and Footer
+
+```tsx padded
+<div>
+    <Card header="Header" footer="Footer">
+        Mauris pretium a ligula vitae vehicula. Morbi at vestibulum ante.
+        Integer diam neque, cursus non metus ac, hendrerit blandit erat.
+        Maecenas lectus nisi, lacinia at euismod id, molestie ut leo.
+    </Card>
+</div>
 ```

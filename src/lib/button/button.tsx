@@ -1,29 +1,31 @@
-import React from 'react';
+import { useButtonProps } from '@restart/ui/Button';
+import React, { ElementType } from 'react';
 import ButtonProps from './button.props';
 import './button.less';
 
 /**
  * A generic button
  * @param props {@link ButtonProps}
- * @returns Element
  */
 function Button(props: ButtonProps): JSX.Element {
+    const [buttonProps, { tagName }] = useButtonProps({ ...props });
+
+    const Component = tagName as ElementType;
+
     return (
-        <button
-            id={props.id}
+        <Component
+            {...props}
+            {...buttonProps}
             className={`button${props.className ? ` ${props.className}` : ''}`}
-            disabled={props.disabled}
-            name={props.name}
             data-block={props.block}
             data-hollow={props.hollow}
             data-shape={props.shape || 'square'}
             data-size={props.size || 'medium'}
             data-variant={props.variant || 'primary'}
-
             data-testid={props['data-testid']}
         >
             {props.children}
-        </button>
+        </Component>
     );
 }
 

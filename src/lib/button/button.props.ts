@@ -1,8 +1,7 @@
-import { ReactNode } from 'react';
+import { ButtonProps as BaseButtonProps } from '@restart/ui/Button';
 
-interface ButtonProps extends Partial<Omit<HTMLButtonElement, 'children'>> {
+interface ButtonProps extends BaseButtonProps {
     block?: boolean;
-    children?: ReactNode;
     hollow?: boolean;
     shape?: 'square' | 'round' | 'circle';
     size?: 'small' | 'medium' | 'large';
