@@ -1,5 +1,4 @@
-import { useButtonProps } from '@restart/ui/Button';
-import React, { ElementType } from 'react';
+import React from 'react';
 import ButtonProps from './button.props';
 import './button.less';
 
@@ -8,14 +7,8 @@ import './button.less';
  * @param props {@link ButtonProps}
  */
 function Button(props: ButtonProps): JSX.Element {
-    const [buttonProps, { tagName }] = useButtonProps({ ...props });
-
-    const Component = tagName as ElementType;
-
     return (
-        <Component
-            {...props}
-            {...buttonProps}
+        <button
             className={`button${props.className ? ` ${props.className}` : ''}`}
             data-block={props.block}
             data-hollow={props.hollow}
@@ -25,7 +18,7 @@ function Button(props: ButtonProps): JSX.Element {
             data-testid={props['data-testid']}
         >
             {props.children}
-        </Component>
+        </button>
     );
 }
 
