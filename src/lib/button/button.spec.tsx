@@ -71,8 +71,7 @@ describe('Button', () => {
 })
 
 const defaultProps: ButtonProps = {
-    children,
-    'data-testid': testid
+    children
 };
 
 function renderButton(props?: Partial<ButtonProps>) {
@@ -80,6 +79,7 @@ function renderButton(props?: Partial<ButtonProps>) {
         <Button
             {...defaultProps}
             {...props}
+            data-testid={testid}
         />
     )
 }

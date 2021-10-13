@@ -11,6 +11,7 @@ function Button(props: ButtonProps): JSX.Element {
         <button
             {...props}
             className={`button${props.className ? ` ${props.className}` : ''}`}
+            disabled={props.disabled}
             data-block={props.block}
             data-hollow={props.hollow}
             data-shape={props.shape || 'square'}

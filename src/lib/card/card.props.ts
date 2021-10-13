@@ -1,10 +1,16 @@
-import { ReactNode } from 'react';
+import {
+    HTMLAttributes,
+    ReactNode
+} from 'react';
 
-interface CardProps extends Partial<Omit<HTMLElement, 'children'>> {
+interface CardProps extends HTMLAttributes<HTMLDivElement> {
+    bodyClassName?: string;
     children?: ReactNode;
     footer?: ReactNode;
+    footerClassName?: string;
     header?: ReactNode;
-    'data-testid'?: string;
+    headerClassName?: string;
+    size?: 'small' | 'medium' | 'large';
 }
 
 export default CardProps;

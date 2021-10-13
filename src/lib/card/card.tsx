@@ -10,23 +10,20 @@ import './card.less';
 function Card(props: CardProps): JSX.Element {
     return (
         <div
-            id={props.id}
+            {...props}
             className={`card${props.className ? ` ${props.className}` : ''}`}
-            title={props.title}
-            data-testid={props['data-testid']}
+            data-size={props.size}
         >
             {props.header && (
-                <div className="card-header">
-                    {props.header instanceof String
-                        ? <strong>{props.header}</strong>
-                        : props.header}
+                <div className={`card-header${props.headerClassName ? ` ${props.headerClassName}` : ''}`}>
+                    {props.header}
                 </div>
             )}
-            <div className="card-body">
+            <div className={`card-body${props.headerClassName ? ` ${props.headerClassName}` : ''}`}>
                 {props.children}
             </div>
             {props.footer && (
-                <div className="card-footer">
+                <div className={`card-footer${props.headerClassName ? ` ${props.headerClassName}` : ''}`}>
                     {props.footer}
                 </div>
             )}

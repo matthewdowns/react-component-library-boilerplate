@@ -7,6 +7,20 @@
     border-radius: 0.25rem;
     box-shadow: 0 0 5px 1px @light;
 
+    &[data-size="small"] {
+        > .card-header, > .card-body, > .card-footer { padding: 0.5rem; }
+        > .card-header { font-size: 1rem; }
+        > .card-body { font-size: 0.875rem; }
+        > .card-footer { font-size: 0.75rem; }
+    }
+
+    &[data-size="large"] {
+        > .card-header, > .card-body, > .card-footer { padding: 1.5rem; }
+        > .card-header { font-size: 1.25rem; }
+        > .card-body { font-size: 1.125rem; }
+        > .card-footer { font-size: 1rem; }
+    }
+
     > .card-header {
         flex-shrink: 1;
         padding: 1rem;
@@ -19,14 +33,14 @@
         flex-grow: 1;
         padding: 1rem;
         font-size: 1rem;
-        font-weight: 200;
+        font-weight: 300;
     }
 
     > .card-footer {
         flex-shrink: 1;
         padding: 1rem;
         border-top: 1px solid @light;
-        font-size: 0.87rem;
+        font-size: 0.875rem;
         font-weight: 200;
     }
 }
