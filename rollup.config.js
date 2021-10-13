@@ -1,11 +1,16 @@
 import nodeResolve from '@rollup/plugin-node-resolve';
 import typescript from '@rollup/plugin-typescript';
+import copy from 'rollup-plugin-copy';
 import postcss from 'rollup-plugin-postcss';
 import { terser } from 'rollup-plugin-terser';
-import { resolve } from 'path';
+import { join, resolve } from 'path';
 import { dependencies } from './package.json';
 
+const srcPath = resolve(__dirname, './src');
+const distPath = resolve(__dirname, './dist');
+
 const input = resolve(__dirname, './src/index.ts');
+
 const external = Object.keys(dependencies);
 const umdName = 'rclb';
 
@@ -14,12 +19,12 @@ export default [
         input,
         output: [
             {
-                dir: resolve(__dirname, './dist'),
+                dir: distPath,
                 format: 'esm',
                 sourcemap: true
             },
             {
-                file: resolve(__dirname, `./dist/umd/${umdName}.js`),
+                file: join(distPath, `umd/${umdName}.js`),
                 format: 'umd',
                 name: umdName,
                 sourcemap: true,
@@ -47,7 +52,7 @@ export default [
     {
         input,
         output: {
-            file: resolve(__dirname, `./dist/umd/${umdName}.min.js`),
+            file: join(distPath, `dist/umd/${umdName}.min.js`),
             format: 'umd',
             name: umdName,
             sourcemap: false,
@@ -73,6 +78,11 @@ export default [
                 use: {
                     less: { javascriptEnabled: true }
                 }
+            }),
+            copy({
+                targets: [
+                    { src: join(srcPath, 'styles'), dest: distPath }
+                ]
             })
         ],
         external
