@@ -5,15 +5,9 @@
     "keywords": [
         "boilerplate",
         "component-library",
-        "eslint",
-        "jest",
         "react",
         "react-component-library",
-        "reactjs",
-        "rollup",
-        "styleguidist",
-        "testing-library",
-        "typescript"
+        "styleguide"
     ],
     "license": "MIT",
     "author": "Matthew Downs <matthew.downsc@gmail.com>",
@@ -31,7 +25,6 @@
     ],
     "scripts": {
         "start": "npm run styleguide:serve",
-        "lint": "eslint .",
         "prebuild": "rimraf ./dist",
         "build": "rollup -c",
         "test": "jest",
@@ -52,12 +45,8 @@
         "@types/node": "^16.11.1",
         "@types/react": "^17.0.30",
         "@types/react-dom": "^17.0.9",
-        "@typescript-eslint/eslint-plugin": "^4.33.0",
-        "@typescript-eslint/parser": "^4.33.0",
         "babel-loader": "^8.2.5",
         "css-loader": "^6.4.0",
-        "eslint": "^7.32.0",
-        "eslint-plugin-react": "^7.26.1",
         "jest": "^27.4.3",
         "jest-transform-stub": "^2.0.0",
         "less": "^4.1.2",

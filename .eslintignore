@@ -1,9 +1,0 @@
-dist/
-docs/
-node_modules/
-scripts/
-src/stories/
-styleguide/setup.js
-
-jest.config.js
-styleguide.config.js
