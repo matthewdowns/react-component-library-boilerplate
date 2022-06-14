@@ -1,3 +1,4 @@
+const NodePolyfillPlugin = require('node-polyfill-webpack-plugin')
 const { join } = require('path');
 const TsconfigPathsWebpackPlugin = require('tsconfig-paths-webpack-plugin');
 const { DefinePlugin } = require('webpack');
@@ -66,7 +67,8 @@ module.exports = {
         plugins: [
             new DefinePlugin({
                 process: { env: { } }
-            })
+            }),
+            new NodePolyfillPlugin()
         ],
         devtool: 'source-map',
         devServer: {

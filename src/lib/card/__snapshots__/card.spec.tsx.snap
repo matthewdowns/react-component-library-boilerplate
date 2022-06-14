@@ -1,0 +1,32 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Card matches snapshot 1`] = `
+<div>
+  <div
+    class="card"
+    data-testid="card"
+  >
+    <div
+      class="card-header"
+    >
+      <p>
+        Header
+      </p>
+    </div>
+    <div
+      class="card-body"
+    >
+      <p>
+        Children
+      </p>
+    </div>
+    <div
+      class="card-footer"
+    >
+      <p>
+        Footer
+      </p>
+    </div>
+  </div>
+</div>
+`;
