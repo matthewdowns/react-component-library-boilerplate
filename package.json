@@ -25,13 +25,15 @@
     ],
     "scripts": {
         "start": "npm run styleguide:serve",
+        "lint": "ts-standard -p ./tsconfig.json",
         "prebuild": "rimraf ./dist",
-        "build": "rollup -c",
+        "build": "rollup -c ./rollup.config.js",
         "test": "jest",
         "styleguide:build": "styleguidist build",
         "styleguide:serve": "styleguidist server"
     },
     "dependencies": {
+        "classnames": "^2.3.1",
         "react": "^17.0.2",
         "react-dom": "^17.0.2"
     },
@@ -61,6 +63,7 @@
         "style-loader": "^3.3.1",
         "ts-jest": "^27.0.7",
         "ts-loader": "^9.2.6",
+        "ts-standard": "^11.0.0",
         "tsconfig-paths-webpack-plugin": "^3.5.1",
         "typescript": "^4.3.5"
     },
