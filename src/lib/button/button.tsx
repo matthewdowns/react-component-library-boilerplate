@@ -20,7 +20,6 @@ function Button (props: ButtonProps): JSX.Element {
       data-shape={props.shape ?? 'square'}
       data-size={props.size ?? 'medium'}
       data-variant={props.variant ?? 'primary'}
-
       data-testid={props['data-testid']}
     >
       {props.children}
