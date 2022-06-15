@@ -1,5 +1,4 @@
-require('@testing-library/jest-dom')
-const jest = require('jest')
+import '@testing-library/jest-dom'
 
 Object.defineProperty(window, 'matchMedia', {
   writable: true,

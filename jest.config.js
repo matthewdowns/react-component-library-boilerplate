@@ -129,7 +129,7 @@ module.exports = {
 
   // A list of paths to modules that run some code to configure or set up the testing framework before each test
   setupFilesAfterEnv: [
-    '<rootDir>/jest.setup.js'
+    '<rootDir>/jest.setup.ts'
   ],
 
   // The number of seconds after which a test is considered as slow and reported as such in the results.
@@ -176,7 +176,7 @@ module.exports = {
   // A map from regular expressions to paths to transformers
   transform: {
     '^.+\\.(less)$': 'jest-transform-stub',
-    '^.+\\.tsx$': 'ts-jest'
+    '^.+\\.tsx?$': 'ts-jest'
   }
 
   // An array of regexp pattern strings that are matched against all source file paths, matched files will skip transformation
