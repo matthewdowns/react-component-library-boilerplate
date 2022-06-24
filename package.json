@@ -5,15 +5,9 @@
     "keywords": [
         "boilerplate",
         "component-library",
-        "eslint",
-        "jest",
         "react",
         "react-component-library",
-        "reactjs",
-        "rollup",
-        "styleguidist",
-        "testing-library",
-        "typescript"
+        "styleguide"
     ],
     "license": "MIT",
     "author": "Matthew Downs <matthew.downsc@gmail.com>",
@@ -26,15 +20,20 @@
         "url": "git+https://github.com/matthewdowns/react-component-library-boilerplate.git"
     },
     "main": "dist/index.js",
+    "files": [
+        "./dist"
+    ],
     "scripts": {
         "start": "npm run styleguide:serve",
-        "lint": "eslint .",
-        "build": "rimraf dist && rollup -c && node scripts/postbuild.js",
+        "lint": "ts-standard -p ./tsconfig.json",
+        "prebuild": "rimraf ./dist",
+        "build": "rollup -c ./rollup.config.js",
         "test": "jest",
         "styleguide:build": "styleguidist build",
         "styleguide:serve": "styleguidist server"
     },
     "dependencies": {
+        "classnames": "^2.3.1",
         "react": "^17.0.2",
         "react-dom": "^17.0.2"
     },
@@ -48,16 +47,13 @@
         "@types/node": "^16.11.1",
         "@types/react": "^17.0.30",
         "@types/react-dom": "^17.0.9",
-        "@typescript-eslint/eslint-plugin": "^4.33.0",
-        "@typescript-eslint/parser": "^4.33.0",
         "babel-loader": "^8.2.5",
         "css-loader": "^6.4.0",
-        "eslint": "^7.32.0",
-        "eslint-plugin-react": "^7.26.1",
         "jest": "^27.4.3",
         "jest-transform-stub": "^2.0.0",
         "less": "^4.1.2",
         "less-loader": "^10.2.0",
+        "node-polyfill-webpack-plugin": "^1.1.4",
         "postcss": "^8.3.9",
         "react-styleguidist": "^11.1.7",
         "rimraf": "^3.0.2",
@@ -67,11 +63,17 @@
         "style-loader": "^3.3.1",
         "ts-jest": "^27.0.7",
         "ts-loader": "^9.2.6",
+        "ts-standard": "^11.0.0",
         "tsconfig-paths-webpack-plugin": "^3.5.1",
         "typescript": "^4.3.5"
     },
-    "engines": {
-        "node": ">=12 <=16"
+    "ts-standard": {
+      "ignore": [
+        "/dist",
+        "/jest.setup.ts",
+        "/node_modules",
+        "/src/**/*.spec.tsx"
+      ]
     },
     "private": true
 }

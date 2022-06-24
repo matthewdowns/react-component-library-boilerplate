@@ -1,4 +1,6 @@
 ```tsx padded
+import Button from '@matthewdowns/react-component-library-boilerplate/lib/button'
+
 <div>
     <Button>Button</Button>
 </div>
