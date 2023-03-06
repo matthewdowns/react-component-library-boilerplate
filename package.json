@@ -40,7 +40,7 @@
     "devDependencies": {
         "@axe-core/react": "^4.4.3",
         "@rollup/plugin-node-resolve": "^13.3.0",
-        "@rollup/plugin-typescript": "^8.3.0",
+        "@rollup/plugin-typescript": "^11.0.0",
         "@testing-library/jest-dom": "^5.14.1",
         "@testing-library/react": "^14.0.0",
         "@types/jest": "^27.0.2",
